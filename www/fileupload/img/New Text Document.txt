@@ -1,0 +1,51 @@
+DEC 28 2016 (Time Spent 3 Hours)
+-----------------------
+Fixed issues in SaferWatch API Integration 
+
+JAN 11 2017 (Time Spent 8 Hours)
+--------------------------
+1) It looks like the system maybe be calling the saferwatch api when clicking on the carrier menu or maybe it is showing the safer watch icon incorrectly. 
+2) When adding a carrier to a load, if you click on the SaferWatch icon within the carrier drop down list it opens up the SaferWatch web in the same window.
+ Instead if should open up in a new tab so the user keeps the load open on the original tab.
+3)  Once a day we need to call the GetChangedCarriers api as described in the video. I am guessing we should display a message to the user as this is happening.
+4) SystemConfig.SaferWatchUpdateCarrierInfo = False then do not update Carrier Name, Address, City, State, Zip, Phone and Fax numbers when doing a CarrierLookup update or GetChangedCarriers update. 
+
+
+JAN16 2017 (Time Spent 8 Hours)
+-----------------
+1.Only Update Carrier during the 1) CarrierChangeUpdate call, 2)When adding a carrier into the system for the first time 3) when adding a carrier to a load, 4) when the user clicks the Update via SaferWatch button on the carrier screen.
+2.Do not update the carrier or make any saferwatch called when carriers are being listed in the drop down on the load entry screen or on the carrier list screen when the Carrier menu is clicked. Also do not make a call to saferwatch when the user clicks the carrier save button. 
+3.Completed  data reset issue in Load Manager 
+
+JAN 25 2017 (Time Spent 3 Hrs) 
+-----------
+1. Completed LoadManager customer database risk icons population  
+ 
+ JAN 31 2017
+----------------
+2.Disable customercode or vendorcode in Edit Loadmanager (Time Spent 0.5 hr)
+
+FEB 16 2017 (Time Spent 4.5 hrs)
+------------------------------------------------ 
+
+1. Autoload Vendorcode and Mobile App password
+2. Insurance Address field issue.
+	a. Mask the field so that users will enter address in correct format (in future)at front end which Suvarna already did.
+	b. Correct the wrong address that is already in db, this is pending. Need more time to check if I can write a query correct the formatting(for corrupted address).
+3. Insurance Limit field extra 0s.
+4. Save User Button widthissue.
+5. Button layout issue at the bottom of the loads page.
+6. removed the unwanted zip and city checkboxes.
+
+FEB 20 2017  (Time Spent 4 hrs)
+------------------------------------
+
+1 . When populating data using saferwatch the Remit Information ,Fed Tax ID ,Equip,Fed Tax ID,Track 1099,Vendor Code,Mobile App Password,Carrier Notes,Carrier Commodity Pricing,Notes,Equipment Notes get reset.
+2 . Remit Contact has invalid validation.
+3. Format values for  fields Remit Phone and Remit Fax .
+4. When populating Phonenumber it should be formatted .
+
+
+
+ 
+
